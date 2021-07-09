@@ -1,5 +1,5 @@
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    blockMenu.showMenu(["store", ""], MenuStyle.Grid, MenuLocation.FullScreen)
+    blockMenu.showMenu(["store", ""], MenuStyle.Grid, MenuLocation.BottomHalf)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
