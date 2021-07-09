@@ -26,8 +26,10 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, oth
     info.changeScoreBy(1)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
-    sprite.destroy()
-    info.changeLifeBy(-1)
+    if (!(blockMenu.isMenuOpen())) {
+        sprite.destroy()
+        info.changeLifeBy(-1)
+    }
 })
 blockMenu.onMenuOptionSelected(function (option, index) {
     if (blockMenu.selectedMenuOption() == "store") {
